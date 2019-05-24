@@ -4,9 +4,10 @@
     <title>App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" script src="./javascripts/move.js"></script>
   </head>
 
   <body>
@@ -29,14 +30,13 @@
         </ul>
         
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          <button type="button" class="btn btn-outline-primary bluebottom">NewPost</button>
+          <button type="button" class="btn btn-outline-primary bluebottom" a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal">NewPost</button>
         </form>
       </div>
 
    </nav>
-   
    <header>
     <%= yield %>
   </body>

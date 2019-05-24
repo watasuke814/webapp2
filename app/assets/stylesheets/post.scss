@@ -9,9 +9,8 @@
     margin:auto;
   }
   
-
   .card {
-    width: 500px;
+    width: 510px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px #ccc;
@@ -21,7 +20,7 @@
     display: inline-block;
   }
   .card-img {
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 5px 5px;
     max-width: 100%;
     height: auto;
   }
@@ -30,6 +29,7 @@
   }
   .card-title {
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     color: #333;
@@ -53,4 +53,4 @@
     color: #0090aa;
   }
 
-
+  
