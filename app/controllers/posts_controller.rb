@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.page(params[:page]).per(4)
+    @posts = Post.page(params[:page]).per(4).order(created_at: :desc)
   end
 
   def create
@@ -8,11 +8,11 @@ class PostsController < ApplicationController
       id: params[:id],
       title: params[:title],
       content: params[:content]
-  )
+     )
 
     if params[:image]
-      @name = params[:image].original_filename
       #image_nameの名前をデータベースに保存
+      @name = params[:image].original_filename
       @post.image_name = "#{@name}"
        #投稿した画像を保存
       image = params[:image]
