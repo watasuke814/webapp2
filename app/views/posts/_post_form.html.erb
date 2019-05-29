@@ -10,11 +10,11 @@
                 </div>
 
                 <div class="form-horizontal" role="form">
-                    <%= form_tag("/posts/create",{multipart: true}) do %>
+                    <%= form_tag("posts",{multipart: true}) do %>
                         <div class="modal-body">
                             <div class="input-group mb-3">
                              <div class="form-group">
-                                <input name="image"  type="file" id="myfile" src="public/hondana.jpg">
+                                <input type="file" name="image" id="myfile">
                                 <img id="img1" style="width:468px;height:351px;" />
                              </div>
                             </div>                      

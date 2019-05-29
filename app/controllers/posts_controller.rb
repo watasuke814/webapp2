@@ -21,9 +21,8 @@ class PostsController < ApplicationController
 
   	if @post.save
   	  flash[:notice] = "投稿を作成しました"
-      redirect_to("/posts/index")
-    else
-      render("posts/new")
+      redirect_to("/posts")
     end
   end
+
 end

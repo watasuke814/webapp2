@@ -67,3 +67,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg', group: :production  # この1行を追加
 gem 'kaminari', '~> 1.1.1'
 gem 'regexp_parser'
+gem 'toastr-rails'

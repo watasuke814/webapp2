@@ -8,7 +8,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     modal.find('.modal-body input').val(recipient)
   })
 
-
   $('#LoginModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -41,6 +40,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     }
 });
 
+$(function(){
   $('#myfile').change(function(e){
     //ファイルオブジェクトを取得する
     var file = e.target.files[0];
@@ -61,4 +61,5 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     })(file);
     reader.readAsDataURL(file);
  
+   });
   });
