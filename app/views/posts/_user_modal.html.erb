@@ -1,0 +1,10 @@
+<div class="modal fade" id="UserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <h2><%= @current_user.name %></h2>
+            <p><%= @current_user.email %></p>
+            <img src="<%= "/user_images/#{@current_user.image_name}" %>">
+            <%= link_to("編集", "/users/#{@current_user.id}/edit") %>
+　        </div>
+     </div>
+</div>

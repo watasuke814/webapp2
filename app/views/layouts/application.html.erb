@@ -27,6 +27,9 @@
           <li class="nav-item active">
            <button type="button" class="btn btn-outline-dark" href="javascript:void(0);" data-toggle="modal" data-target="#SignUpModal">SignUp</button>
           </li>
+          <li class="nav-item active">
+           <button type="button" class="btn btn-outline-dark" href="javascript:void(0);" data-toggle="modal" data-target="#UserModal"><%= @current_user.name %></button>
+          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
@@ -34,9 +37,9 @@
           <button type="button" class="btn btn-outline-primary new_post_bottom" href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal">NewPost</button>
         </form>
       </div>
-
    </nav>
   <header>
+
     <%= yield %>
     <% unless flash.empty? %>
         <script type="text/javascript">
