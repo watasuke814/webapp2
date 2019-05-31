@@ -32,6 +32,15 @@ header{
   margin-right:8px;
 }
 
+img{
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
 /* top ================================ */
 .top-main {
   padding :200px 0 380px;
