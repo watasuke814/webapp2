@@ -21,11 +21,30 @@ class UsersController < ApplicationController
         @user = User.find_by(id: params[:id])
         @user.name = params[:name]
         @user.email = params[:email]
-        if @user.save
-          flash[:notice] = "ユーザー情報を編集しました"
-          redirect_to("/posts")
-        else
-          render("users/edit")
-        end
+      if @user.save
+        flash[:notice] = "ユーザー情報を編集しました"
+        redirect_to("/posts")
+      else
+        render("users/edit")
       end
+    end
+
+    def login
+        @user = User.find_by(email: params[:email], password: params[:password])
+      if @user
+        session[:user_id] = @user.id
+        flash[:notice] = "ログインしました"
+        redirect_to("posts")
+      else
+        flash[:notice] = "emailまたはpasswordが違います"
+        render("/")
+      end
+    end
+
+    def logout
+      session[:user_id] = nil
+      flash[:notice] = "ログアウトしました"
+      redirect_to("/")
+    end
+
 end

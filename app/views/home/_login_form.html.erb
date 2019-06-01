@@ -3,32 +3,25 @@
           <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
 
                 <div class="form-horizontal" role="form">
-                    <%= form_tag("/posts/create",{multipart: true}) do %>
-                        <div class="modal-body">
-                            <div class="input-group mb-3">
-                             <div class="form-group">
-                                <input name="image" type="file">
-                             </div>
-                            </div>                      
+                    <%= form_tag("login",{multipart: true}) do %>
+                        <div class="modal-body">             
                             <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Post Title:</label>
-                                <input name="title" type="text" class="form-control" id="recipient-name">
+                                <input name="email" type="text" class="form-control" id="recipient-name" placeholder="email">
                             </div>
                             <div class="form-group">
-                                <label for="message-text" class="col-form-label">Post Content:</label>
-                                <textarea name="content" class="form-control" id="message-text"></textarea>
-                            </div>
+                                <input name="password" type="password" class="form-control" id="recipient-name" placeholder="password">
+                            </div>  
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button input type="submit" type="button" class="btn btn-primary">Post</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button input type="submit" type="button" class="btn btn-primary">Post</button>
                         </div>
                     <% end %>
                 </div>
