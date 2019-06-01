@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       if @user
         session[:user_id] = @user.id
         flash[:notice] = "ログインしました"
-        redirect_to("posts")
+        redirect_to("/posts")
       else
         flash[:notice] = "emailまたはpasswordが違います"
         render("/")

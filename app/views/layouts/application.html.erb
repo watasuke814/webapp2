@@ -18,29 +18,32 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      <% if session[:user_id] %>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="form-inline my-2 my-lg-0">
-            <div class="header_img" data-toggle="modal" data-target="#UserModal"><img src="<%= "/user_images/#{@current_user.image_name}" %>"></div>
-            <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button type="button" class="btn btn-outline-primary new_post_bottom" data-toggle="modal" data-target="#exampleModal">NewPost</button>
-          </form>
-      <% else %>
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#LoginModal">Login</button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#SignUpModal">SignUp</button>
-            </li>
-            <li class="nav-item">
-                <%= link_to("ログアウト", "/logout", {method: :post}) %>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto">
+              <% if session[:user_id] %>
+                    <li class="nav-item">
+                        <%= link_to("ログアウト", "/logout", {method: :post}) %>
+                    </li>
+                  <form class="form-inline my-2 my-lg-0">
+                        <div class="header_img" data-toggle="modal" data-target="#UserModal"><img src="<%= "/user_images/#{@current_user.image_name}" %>"></div>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button type="button" class="btn btn-outline-primary new_post_bottom" data-toggle="modal" data-target="#exampleModal">NewPost</button>
+                  </form>
+              <% else %>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#LoginModal">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#SignUpModal">SignUp</button>
+                    </li>
+                  </ul>
+              <% end %>
+            </ul>
         </div>
-    </nav>
-   <% end %>
+
+      </nav>
   <header>
 
     <%= yield %>
