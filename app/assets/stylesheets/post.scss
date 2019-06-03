@@ -16,16 +16,25 @@
     margin-left:20px;
     margin-right:20px;
     display: inline-block;
+    border-radius: 20px 20px 20px 20px;
   }
-  .card-img {
-    border-radius: 5px 5px 5px 5px;
-    max-width: 100%;
-    height: auto;
-  }
+  
   .card-content {
     padding: 20px;
   }
 
+ .card-content p{
+    font-size:20px;
+ }
+
+  .user{
+    float:left;
+  }
+
+  .user_item{
+    display: inline-block;
+  }
+  
   .card-user_image img{
     width: 50px;
     height: 50px;
@@ -35,59 +44,41 @@
     margin-right: 10px;
   }
 
-  .card-title {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-  }
-  .card-text {
-    color: #777;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .card-link {
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding: 20px;
-  }
-  .card-link a {
-    text-decoration: none;
-    color: #0bd;
-    margin: 0 10px;
-  }
-  .card-link a:hover {
-    color: #0090aa;
+  .post_title{
+    margin-top: 30px;
   }
 
-  nav.pagination {
-  display: none;
-}
+  .post_image img{ 
+    border-radius: 20px 20px 20px 20px;
+  }
 
-.left_img img{
-  width: 280px;
-  border-radius: 50%;
-}
+  .post_content{
+      font-size:55px;
+  }
 
-.prof_left{
-  margin-top:60px;
-}
-
-.prof_right{
-  margin-top:90px;
-}
-
-.edit{
-  margin-bottom:20px;
-}
+    nav.pagination {
+    display: none;
+  }
 
 
-.lelele{
-  float:left;
-}
 
-.kkk{
-  display: inline-block;
-}
+
+
+
+  .left_img img{
+    width: 280px;
+    border-radius: 50%;
+  }
+
+  .prof_left{
+    margin-top:60px;
+  }
+
+  .prof_right{
+    margin-top:90px;
+  }
+
+  .edit{
+    margin-bottom:20px;
+  }
 

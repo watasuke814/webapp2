@@ -23,7 +23,7 @@ class UsersController < ApplicationController
         @user.email = params[:email]
       if @user.save
         flash[:notice] = "ユーザー情報を編集しました"
-        redirect_to("/posts")
+        redirect_to("posts")
       else
         render("users/edit")
       end

@@ -7,15 +7,15 @@
         <div class="post_card jscroll">
             <% @posts.each do |post| %>   
              <section class="card">
-                     <div class="card-content">
-                        <div class="lelele"> 
-                            <div class="card-user_image kkk"><img src="<%= "/user_images/#{post.user.image_name}" %>"></div>
-                            <h4 class="kkk"><%= post.user.name %></h4>
-                          </div>
-                      <img src="<%= "/pic_images/#{post.image_name}" %>" class="card-img-top">
-                      <br><br><br>
-                      <p class="card-text"><%= simple_format(post.content) %></p>
-                     </div>
+                  <div class="card-content">
+                     <div class="user"> 
+                        <div class="card-user_image user_item"><img src="<%= "/user_images/#{post.user.image_name}" %>"></div>
+                        <p class="user_item"><%= post.user.name %></p>
+                     </div></br>  
+                      <p class="post_title"><%= post.title %></p>
+                      <div class="post_image"><img src="<%= "/pic_images/#{post.image_name}" %>" class="card-img-top"></div></br>
+                      <p class="post_content"><%= simple_format(post.content) %></p>
+                  </div>
              </section>
            <% end %>
            <%= paginate @posts %>

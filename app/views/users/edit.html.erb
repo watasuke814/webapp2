@@ -1,16 +1,19 @@
 <div class="container">
+    <%= form_tag("/users/#{@user.id}/update") do %>
     <div class="row">
-            <div class="col-md-4 left_img prof_left">
-                <img src="<%= "/user_images/#{@current_user.image_name}" %>"> 
-            </div>
-            <div class="col-md-8 prof_right">
-                <label class="col-lg-3 col-form-label form-control-label">Name</label>
-                <input class="form-control edit" type="text" value="Jane" >
-                <label class="col-lg-3 col-form-label form-control-label">Email</label>
-                <input class="form-control edit" type="text" value="Jane">
-                <label class="col-lg-3 col-form-label form-control-label">profile info</label>
-                <textarea class="form-control edit" name="content" id="message-text" rows="6"></textarea>
-            </div>
+        <div class="col-md-4 left_img prof_left">
+            <img src="<%= "/user_images/#{@user.image_name}" %>"> 
+        </div>
+        <div class="col-md-8 prof_right">
+            <label class="col-lg-3 col-form-label form-control-label">Name</label>
+            <input name="name" class="form-control edit" type="text" value="<%= @user.name %>" >
+            <label class="col-lg-3 col-form-label form-control-label">Email</label>
+            <input name="email" class="form-control edit" type="text" value="<%= @user.email %>">
+            <label class="col-lg-3 col-form-label form-control-label">profile info</label>
+            <textarea class="form-control edit" name="content" id="message-text" rows="6"></textarea>
+            <input type="submit" value="save">
+        </div>
     </div>
+    <% end %>
 </div>
 

@@ -12,13 +12,12 @@
                           <h2><%= @current_user.name %></h2> 
                           <h6><%= @current_user.name %></h6>
                           <h6><%= @current_user.email %></h6>
-                          <h6>Old: 1 Year</h6>
                       </div>
                </div>
 
                <div class="row">
                   <div class="col-md-12">
-                      <h5>aaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaa</h5><br>
+                      <%= link_to("edit", "/users/#{@current_user.id}/edit") %>
                   </div>
                </div>
             </div>
