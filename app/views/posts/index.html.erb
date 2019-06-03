@@ -5,12 +5,16 @@
         <%= render partial: 'user_modal'%>
 
         <div class="post_card jscroll">
-            <% @posts.each do |post| %>       
+            <% @posts.each do |post| %>   
              <section class="card">
                      <div class="card-content">
-                       <img src="<%= "/pic_images/#{post.image_name}" %>" class="card-img-top">
-                       <h1 class="card-title"><%= post.title %></h1>
-                       <p class="card-text"><%= simple_format(post.content) %></p>
+                        <div class="lelele"> 
+                            <div class="card-user_image kkk"><img src="<%= "/user_images/#{post.user.image_name}" %>"></div>
+                            <h4 class="kkk"><%= post.user.name %></h4>
+                          </div>
+                      <img src="<%= "/pic_images/#{post.image_name}" %>" class="card-img-top">
+                      <br><br><br>
+                      <p class="card-text"><%= simple_format(post.content) %></p>
                      </div>
              </section>
            <% end %>

@@ -19,37 +19,38 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <% if session[:user_id]  %>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <%= link_to "Logout", logout_path, class: 'btn btn-outline-dark', method: :post %>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <div class="header_img" data-toggle="modal" data-target="#UserModal"><img src="<%= "/user_images/#{@current_user.image_name}" %>"></div>
-                <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                <button type="button" class="btn btn-outline-primary new_post_bottom" data-toggle="modal" data-target="#exampleModal">NewPost</button>
-            </form>
-        </div>
+        <% if @current_user %>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <%= link_to "Logout", logout_path, class: 'btn btn-outline-dark', method: :post %>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                  <div class="header_img" data-toggle="modal" data-target="#UserModal"><img src="<%= "/user_images/#{@current_user.image_name}" %>"></div>
+                  <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <button type="button" class="btn btn-outline-primary new_post_bottom" data-toggle="modal" data-target="#exampleModal">NewPost</button>
+              </form>
+          </div>
         <% else %>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                  <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#LoginModal">Login</button>
-              </li>
-              <li class="nav-item">
-                  <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#SignUpModal">SignUp</button>
-              </li>
-            </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#LoginModal">Login</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-dark"  data-toggle="modal" data-target="#SignUpModal">SignUp</button>
+                </li>
+              </ul>
           </div>
         <% end %>
 
       </nav>
   <header>
 
-    <%= yield %>
+  <%= yield %>
+
     <% unless flash.empty? %>
         <script type="text/javascript">
           <% flash.each do |f| %>

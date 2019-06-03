@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+
+
   def index
     @posts = Post.page(params[:page]).per(4).order(created_at: :desc)
   end
@@ -7,7 +9,8 @@ class PostsController < ApplicationController
     @post = Post.new(
       id: params[:id],
       title: params[:title],
-      content: params[:content]
+      content: params[:content],
+      user_id: @current_user.id
      )
 
     if params[:image]
