@@ -45,9 +45,9 @@ class UsersController < ApplicationController
         redirect_to("/posts")
       else
         flash[:notice] = "emailまたはpasswordが違います"
-        render("/")
-      end
+        redirect_to("/")
     end
+  end
 
     def logout
       session[:user_id] = nil
