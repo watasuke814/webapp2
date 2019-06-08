@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :posts, only: [:index,:create]
-  resources :users, only: [:create,:edit] 
-  post 'users/:id/update', to: 'users#update'
+  resources :users, only: [:create,:edit,:update] 
   post 'login', to: 'users#login'
   post 'logout', to: 'users#logout'
   root 'home#top'

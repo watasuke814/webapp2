@@ -16,4 +16,12 @@ module App
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+
+  module AwesomeEvents
+    class Application < Rails::Application
+      config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+      # 以下省略
+  
+    end
+  end
 end

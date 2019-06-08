@@ -1,19 +1,33 @@
 <div class="container">
-    <%= form_tag("/users/#{@user.id}/update",{multipart: true}) do %>
+    <%= form_with model: @user, local: true do |form| %>   
         <div class="row">
             <div class="col-md-4 left_img prof_left">
-                <img src="<%= "/user_images/#{@user.image_name}" %>" id="img1">
-                <br><br>
-                <input type="file" id="myfile" name="image">   
+                <div class="field image">
+                    <%= form.label 'サムネイル（スクリーンショットなど）' %>
+                    <div id="img_field" onClick="$('#file').click()" >
+                        <% if @user.image_name.present? %>
+                            <%= image_tag("/user_images/#{@user.image_name}") %>
+                        <% else %>
+                            <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+                        <% end %>
+                    </div>      
+                    <%= form.file_field :image, class: "image", style: "display:none;", id: "file"%>
+                </div>
             </div>
             <div class="col-md-8 prof_right">
-                <label class="col-lg-3 col-form-label form-control-label">Name</label>
-                <input name="name" class="form-control edit" type="text" value="<%= @user.name %>">
-                <label class="col-lg-3 col-form-label form-control-label">Email</label>
-                <input name="email" class="form-control edit" type="text" value="<%= @user.email %>">
-                <label class="col-lg-3 col-form-label form-control-label">profile info</label>
-                <textarea class="form-control edit" name="content" id="message-text" rows="6"></textarea>
-                <input type="submit" value="save">
+                <div class="form-group">
+                     <%= form.label :name, 'Name' %>
+                     <%= form.text_field :name, class: 'form-control' %>
+                </div>
+                <div class="form-group">
+                     <%= form.label :title, 'Email' %>
+                     <%= form.text_field :email, class: 'form-control' %>
+                </div>
+                <div class="form-group">
+                    <%= form.label :body, 'Content' %>
+                    <%= form.text_area :content, class: 'form-control', rows: 6 %>
+                </div>
+                <%= form.submit 'Save', class: 'btn btn-primary' %>
             </div>
         </div>
     <% end %>

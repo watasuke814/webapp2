@@ -68,3 +68,5 @@ gem 'pg', group: :production  # この1行を追加
 gem 'kaminari', '~> 1.1.1'
 gem 'regexp_parser'
 gem 'toastr-rails'
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
