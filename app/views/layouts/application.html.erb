@@ -27,7 +27,7 @@
                   </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
-                  <div class="header_img" data-toggle="modal" data-target="#UserModal"><img src="<%= "/user_images/#{@current_user.image_name}" %>"></div>
+                  <div class="header_img" data-toggle="modal" data-target="#UserModal"><%= image_tag @current_user.image_name.to_s %></div>
                   <input class="form-control mr-sm-2" type="search" placeholder="Please Keyword..." aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   <button type="button" class="btn btn-outline-primary new_post_bottom" data-toggle="modal" data-target="#exampleModal">NewPost</button>

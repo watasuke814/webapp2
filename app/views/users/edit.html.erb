@@ -4,10 +4,12 @@
             <div class="col-md-4 left_img prof_left">
                 <div class="field image">
                     <%= form.label 'サムネイル（スクリーンショットなど）' %>
-                    <div id="img_field" onClick="$('#file').click()" >
-                        <%= image_tag("/user_images/#{@user.image_name}") %>
-                    </div>      
-                    <%= form.file_field :image, class: "image", style: "display:none;", id: "file"%>
+                    <div class="field_image">
+                        <div id="img_field" onClick="$('#file').click()">
+                            <%= image_tag @user.image_name.to_s %>
+                        </div>
+                            <%= form.file_field :image, class: "image", style: "display:none;", id: "file"%>
+                    </div>
                 </div>
             </div>
             <div class="col-md-8 prof_right">
