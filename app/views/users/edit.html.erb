@@ -8,7 +8,7 @@
                         <div id="img_field" onClick="$('#file').click()">
                             <%= image_tag @user.image_name.to_s %>
                         </div>
-                            <%= form.file_field :image, class: "image", style: "display:none;", id: "file"%>
+                            <%= form.file_field :image_name, class: "image", style: "display:none;", id: "file"%>
                     </div>
                 </div>
             </div>

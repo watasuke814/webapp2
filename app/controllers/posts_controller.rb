@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     end
 
   	if @post.save
-  	  flash[:notice] = "投稿を作成しました"
+  	  flash[:success] = "投稿を作成しました"
       redirect_to("/posts")
     end
   end

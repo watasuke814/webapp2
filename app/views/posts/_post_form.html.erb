@@ -12,8 +12,8 @@
                     <%= form_with url: posts_path, local: true do |form| %>
                         <div class="modal-body">
                          <div class="form-group">
-                               <%= form.label :title, 'Title' %>
-                               <%= form.text_field :title, class: 'form-control' , placeholder: 'title'%>
+                               <%= form.label :title, 'Title:' %>
+                               <%= form.text_field :title, class: 'form-control'%>
                            </div>
                            <div class="form-group">
                              <div class="field_image">
@@ -24,8 +24,8 @@
                               </div>
                             </div>            
                             <div class="form-group">
-                                <%= form.label :content, 'content' %>
-                                <%= form.text_field :content, class: 'form-control' , rows:6%>
+                                <%= form.label :content, 'content:' %>
+                                <%= form.text_area :content, class: 'form-control' , rows:3%>
                             </div>
                         </div>
                         <div class="modal-footer">

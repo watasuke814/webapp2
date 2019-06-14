@@ -8,7 +8,7 @@ class UsersController < ApplicationController
         redirect_to posts_path
        else
         flash[:error] = "emailかユーザ名がすでに登録されています"
-        redirect_to root_path
+        render 'home/top'
        end
     end 
 
@@ -29,18 +29,17 @@ class UsersController < ApplicationController
         @user = User.find_by(email: params[:email], password: params[:password])
       if @user
         session[:user_id] = @user.id
-        flash[:notice] = "ログインしました"
-        redirect_to("/posts")
+        redirect_to posts_path, notice: "ログインしました"
       else
-        flash[:notice] = "emailまたはpasswordが違います"
-        redirect_to("/")
+        flash[:error] = "入力されたemailまたはpasswordが登録されていません"
+        render 'home/top'
     end
   end
 
     def logout
       session[:user_id] = nil
       flash[:notice] = "ログアウトしました"
-      redirect_to("/")
+      redirect_to root_path
     end
 
     private
