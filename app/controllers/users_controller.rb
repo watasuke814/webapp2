@@ -36,15 +36,15 @@ class UsersController < ApplicationController
     end
   end
 
-    def logout
-      session[:user_id] = nil
-      flash[:notice] = "ログアウトしました"
-      redirect_to root_path
-    end
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウトしました"
+    redirect_to root_path
+  end
 
-    private
-    def user_params
-      params.require(:user).permit(:name,:email,:password,:image_name)
-    end
+ private
+  def user_params
+    params.require(:user).permit(:name,:email,:password,:image_name)
+  end
 
 end

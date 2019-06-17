@@ -2,21 +2,17 @@
      <div class="modal-dialog" role="document">
           <div class="modal-content">
           <div class="container">
-            
               <div class="row">
-                
                       <div class="col-md-6 left_img" >
                         <br>
                         <%= image_tag @current_user.image_name.to_s %>
                       </div>
-
                       <div class="col-md-6 prof_right">
                           <h2><%= @current_user.name %></h2> 
                           <h6><%= @current_user.name %></h6>
                           <h6><%= @current_user.email %></h6>
                       </div>
                </div>
-
                <div class="row">
                   <div class="col-md-12">
                       <%= link_to("edit", "/users/#{@current_user.id}/edit") %>
