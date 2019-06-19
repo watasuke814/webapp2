@@ -15,7 +15,7 @@
                       <p class="post_title"><%= post.title %></p>
                       <div class="post_image"><%= image_tag post.image_name.to_s %></div></br>
                       <p class="post_content"><%= simple_format(post.content) %></p>
-                      <%= post.created_at %>
+                      <div class="post_time"><%= post.created_at %></div>
                   </div>
              </section>
            <% end %>
