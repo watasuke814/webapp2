@@ -1,5 +1,6 @@
 class UsersController < ApplicationController 
-
+  before_action :forbid_login_user, {only: [:create, :login]}
+  
   def create
     @user = User.new(user_params)
       if @user.save
