@@ -1,0 +1,30 @@
+<div class="post_card jscroll">
+    <% @search_posts.each do |post| %>   
+          <section class="card">
+              <div class="card-content">
+                  <div class="user">
+                    <div class="card-user_image user_item">
+                        <%= image_tag post.user.image_name.to_s %>
+                    </div>
+                    <p class="user_item">
+                        <%= post.user.name %> 
+                    </p>
+                  </div>
+                  </br> 
+                  <p class="post_title">
+                      <%= post.title %>
+                  </p>
+                  <div class="post_image">
+                      <%= image_tag post.image_name.to_s %></br>
+                  </div>
+                  <p class="post_content">
+                      <%= simple_format(post.content) %>
+                  </p>
+                  <div class="post_time">
+                      <%= post.created_at %>
+                  </div>
+              </div>
+          </section>
+    <% end %>
+    <%= paginate @search_posts %>
+</div>

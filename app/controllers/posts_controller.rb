@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = @current_user.id
     if @post.save
-      flash[:success] = "投稿を作成しました"
+      flash[:success] = "Post created"
       redirect_to posts_path
     else
       @posts = Post.page(params[:page]).per(4).order(created_at: :desc)

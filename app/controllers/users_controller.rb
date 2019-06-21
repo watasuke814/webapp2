@@ -5,10 +5,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
        session[:user_id] = @user.id
-       flash[:success] = "ユーザー登録が完了しました"
+       flash[:success] = "User registration completed"
        redirect_to posts_path
       else
-       flash[:error] = "emailかユーザ名がすでに登録されています"
+       flash[:error] = "Email or username already registered"
        render 'home/top'
       end
   end 
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def update
       @user = User.find_by(id: params[:id])
     if @user.update(user_params)
-      redirect_to posts_path, notice: "ユーザー情報を編集しました。"
+      redirect_to posts_path, notice: "User information has been updated."
     else
       render :edit
     end
@@ -30,16 +30,16 @@ class UsersController < ApplicationController
       @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect_to posts_path, notice: "ログインしました"
+      redirect_to posts_path, notice: "Login succeeded"
     else
-      flash[:error] = "入力されたemailまたはpasswordが登録されていません"
+      flash[:error] = "The entered email or password has not been registered"
       render 'home/top'
     end
   end
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = "ログアウトしました"
+    flash[:notice] = "You were logged out"
     redirect_to root_path
   end
 
