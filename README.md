@@ -1,9 +1,7 @@
-# README
+# peractrum
+This is a simple post feature app. 
 
-This README would normally document whatever steps are necessary to get
-
-Things you may want to cover:
-
+## 
 * Ruby version
 
 * System dependencies
