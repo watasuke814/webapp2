@@ -12,14 +12,14 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     if @current_user == nil
-      flash[:error] = "ログインしていません"
+      flash[:error] = "You were not login"
       redirect_to root_path
     end
   end
 
   def forbid_login_user
     if @current_user
-      flash[:error] = "ログイン済みです"
+      flash[:error] = "You are already logged in"
       redirect_to posts_path
     end
   end

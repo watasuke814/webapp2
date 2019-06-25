@@ -12,6 +12,8 @@ class PostsController < ApplicationController
       flash[:success] = "Post created"
       redirect_to posts_path
     else
+      flash[:error] = "Please do not open the blank
+                       <br>Please post within 140 characters"
       @posts = Post.page(params[:page]).per(4).order(created_at: :desc)
       render :index
     end

@@ -50,6 +50,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     }
 });
 
+
 $(function(){
   $fileField = $('#file')
  
@@ -72,4 +73,16 @@ $(function(){
     })(file);
     reader.readAsDataURL(file);
   });
+});
+
+
+
+// $(".bg-slider").bgswitcher({
+//   images: ["image_path('hondana.jpg')", "image_path('neko.jpg')", "image_path('suga.jpg')"],
+// });
+
+$(function(){
+  $(".bg-slider").bgswitcher({
+    images: ['<%= image_tag("hondana.jpg") %>', '<%= image_tag("neko.jpg") %>', '<%= image_tag("suga.jpg") %>'],
+    });
 });
