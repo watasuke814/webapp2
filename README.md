@@ -1,4 +1,4 @@
-# peractrum
+# BookSalon
 This is a simple post feature app. 
 
 ## 
