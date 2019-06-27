@@ -22,8 +22,8 @@ This is a post feature app. Users post photos and memories about it.
 
 ## UI,UX
 *  Adopting responsive correspondence to be able to use without discomfort even in devices such as smartphones.
-*  Reduce stress in use by making it similar to SPA
-*  Eliminate page transitions by implementing modal and infinite scroll
+*  Reduce stress in use by making it similar to SPA.
+*  Eliminate page transitions by implementing modal and infinite scroll.
 
 ## Environment
 *  Docker 18.09.2
