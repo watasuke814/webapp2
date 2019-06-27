@@ -22,11 +22,11 @@ This is a post feature app. Users post photos and memories about it.
 
 
 
-## environment
+## Environment
 *  Docker 18.09.2
 *  Ruby on Rails 5.2.3
 
-## languages, plugin
+## Languages, Plugin
 *  Ruby 2.6.3
 *  html
 *  css
@@ -35,7 +35,7 @@ This is a post feature app. Users post photos and memories about it.
 *  jQuery jscroll
 *  jQuery.bgswitcher
 
-## gems
+## Gems
 *  'kaminari', '~> 1.1.1'
 *  'toastr-rails'
 *  'carrierwave', '~> 1.0'
