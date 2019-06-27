@@ -15,6 +15,12 @@ This is a post feature app. Users post photos and memories about it.
 
 <img width="1440" alt="スクリーンショット 2019-06-27 19 24 10" src="https://user-images.githubusercontent.com/40481945/60258988-32f63200-9911-11e9-8cb9-bdbf55cb4d58.png">
 
+* search post
+<img width="1440" alt="スクリーンショット 2019-06-27 19 27 31" src="https://user-images.githubusercontent.com/40481945/60259224-badc3c00-9911-11e9-8fd1-95b80eb1026a.png">
+
+<img width="1440" alt="スクリーンショット 2019-06-27 19 27 58" src="https://user-images.githubusercontent.com/40481945/60259226-bdd72c80-9911-11e9-9004-1695c656f733.png">
+
+
 
 ## environment
 *  Docker 18.09.2
