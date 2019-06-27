@@ -7,6 +7,5 @@ This is a simple post feature app. Users post photos and memories about it.
 * input and post
 <img width="1440" alt="スクリーンショット 2019-06-27 17 09 12" src="https://user-images.githubusercontent.com/40481945/60248839-6c717200-98fe-11e9-96d6-f42d04b2ca3b.png">
 
-<img width="1440" alt="スクリーンショット 2019-06-27 17 14 09" src="https://user-images.githubusercontent.com/40481945/60249106-089b7900-98ff-11e9-9221-5fa00357a261.png">
-
+<img width="1440" alt="スクリーンショット 2019-06-27 17 16 31" src="https://user-images.githubusercontent.com/40481945/60249217-57e1a980-98ff-11e9-82ce-80653fbde2ab.png">
 
