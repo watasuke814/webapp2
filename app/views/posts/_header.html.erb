@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand brand_rogo" href="/">BookSalon</a>
 
+        <a class="navbar-brand brand_rogo" href="/">Nostalium</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,19 +9,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                <%= link_to "Logout", logout_path, class: 'btn btn-outline-dark', method: :post %>
+                    <%= link_to "Logout", logout_path, class: 'btn btn-outline-dark', method: :post %>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <div class="header_img" data-toggle="modal" data-target="#UserModal">
-                <%= image_tag @current_user.image_name.to_s %>
+                    <%= image_tag @current_user.image_name.to_s %>
                 </div>
                 <%= search_form_for @search, url:posts_path do |form| %>
-                <%= form.text_field :title_or_content_cont, class: "form-control mr-sm-2", placeholder: "Please Keyword..." %>
-                <%= form.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0"%>
+                    <%= form.text_field :title_or_content_cont, class: "form-control mr-sm-2", placeholder: "Please Keyword..." %>
+                    <%= form.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0"%>
                 <% end %>
                 <button type="button" class="btn btn-outline-primary new_post_bottom" data-toggle="modal" data-target="#exampleModal">NewPost</button>
             </form>
         </div>
+
     </nav> 
 <header>
