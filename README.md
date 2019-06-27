@@ -21,7 +21,7 @@ This is a post feature app. Users post photos and memories about it.
 <img width="1440" alt="スクリーンショット 2019-06-27 19 27 58" src="https://user-images.githubusercontent.com/40481945/60259226-bdd72c80-9911-11e9-9004-1695c656f733.png">
 
 ## UI,UX
-*  Adopt responsive correspondence to be able to use without discomfort even in terminals such as smartphones
+*  Adopting responsive correspondence to be able to use without discomfort even in terminals such as smartphones
 *  Ruby on Rails 5.2.3
 
 ## Environment
@@ -43,5 +43,3 @@ This is a post feature app. Users post photos and memories about it.
 *  'carrierwave', '~> 1.0'
 *  'ransack'
 *  'jquery-bgswitcher-rails'
-
-
