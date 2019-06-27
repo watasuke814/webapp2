@@ -13,6 +13,9 @@ This is a post feature app. Users post photos and memories about it.
 
 <img width="1438" alt="スクリーンショット 2019-06-27 19 21 39" src="https://user-images.githubusercontent.com/40481945/60258876-fd514900-9910-11e9-9b93-82df486c4427.png">
 
+<img width="1440" alt="スクリーンショット 2019-06-27 19 24 10" src="https://user-images.githubusercontent.com/40481945/60258988-32f63200-9911-11e9-8cb9-bdbf55cb4d58.png">
+
+
 ## environment
 *  Docker 18.09.2
 *  Ruby on Rails 5.2.3
