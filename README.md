@@ -20,7 +20,7 @@ This is a post feature app. Users post photos and memories about it.
 
 <img width="1440" alt="スクリーンショット 2019-06-27 19 27 58" src="https://user-images.githubusercontent.com/40481945/60259226-bdd72c80-9911-11e9-9004-1695c656f733.png">
 
-## UI,UX
+## UI
 *  Adopting responsive correspondence to be able to use without discomfort even in devices such as smartphones.
 *  Reduce stress in use by making it similar to SPA.
 *  Eliminate page transitions by implementing modal and infinite scroll.
