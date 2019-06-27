@@ -39,6 +39,8 @@ This is a post feature app. Users post photos and memories about it.
 *  jQuery.bgswitcher
 
 ## Gems
+*  'bootstrap', '~> 4.3.1'
+*  'jquery-rails'
 *  'kaminari', '~> 1.1.1'
 *  'toastr-rails'
 *  'carrierwave', '~> 1.0'
