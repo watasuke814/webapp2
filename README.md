@@ -8,3 +8,23 @@ This is a simple post feature app. Users post photos and memories about it.
 
 <img width="1440" alt="スクリーンショット 2019-06-27 17 16 31" src="https://user-images.githubusercontent.com/40481945/60249217-57e1a980-98ff-11e9-82ce-80653fbde2ab.png">
 
+## language plugin
+*  Ruby 2.6.3
+*  Ruby on Rails 5.2.3
+*  Html
+*  css
+*  javascript
+*  bootstrap 4.3
+*  jQuery jscroll
+*  jquery.bgswitcher
+
+## gems
+*  
+*  Ruby on Rails 5.2.3
+*  Html
+*  css
+*  javascript
+*  bootstrap 4.3
+*  jQuery jscroll
+*  jquery.bgswitcher
+
