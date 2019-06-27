@@ -1,5 +1,5 @@
-# BookSalon
-This is a simple post feature app. 
+# Nostalium
+This is a simple post feature app. Users post photos and memories about it
 
 ## 
 * Ruby version
