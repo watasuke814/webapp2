@@ -19,12 +19,10 @@ This is a simple post feature app. Users post photos and memories about it.
 *  jquery.bgswitcher
 
 ## gems
-*  
-*  Ruby on Rails 5.2.3
-*  Html
-*  css
-*  javascript
-*  bootstrap 4.3
-*  jQuery jscroll
-*  jquery.bgswitcher
+*  'kaminari', '~> 1.1.1'
+*  'toastr-rails'
+*  'carrierwave', '~> 1.0'
+*  'ransack'
+*  'jquery-bgswitcher-rails'
+
 
