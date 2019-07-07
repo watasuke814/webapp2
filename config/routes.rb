@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts, only: [:index,:create]
+  resources :posts , only: [:index,:create] do
+    resource :favorites, only: [:create, :destroy]
+  end
   resources :users, only: [:create,:edit,:update] 
   post 'login', to: 'users#login'
   post 'logout', to: 'users#logout'

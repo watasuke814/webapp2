@@ -1,16 +1,10 @@
 <%= render partial: 'header' %>
+<%= render partial: 'user_profile_modal'%>
+<%= render partial: 'post_form_modal' %>
+
 <div class="posts-index">
     <div class="container">
-
-      <%= render partial: 'user_profile_modal'%>
-      <%= render partial: 'post_form_modal' %>
-     
-      <% if @search %>
         <%= render partial: 'search_result' %>
-      <% else %>
-        <%= render partial: 'posts' %>
-      <% end %>  
-       
     </div>
 </div>
     

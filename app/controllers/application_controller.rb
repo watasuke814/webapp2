@@ -5,11 +5,6 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by(id: session[:user_id])
   end
 
-  def set_search
-    @search = Post.ransack(params[:q]) 
-    @search_posts = @search.result.page(params[:page]).per(4).order(created_at: :desc)
-  end
-
   def authenticate_user
     if @current_user == nil
       flash[:error] = "You were not login"
@@ -22,5 +17,10 @@ class ApplicationController < ActionController::Base
       flash[:error] = "You are already logged in"
       redirect_to posts_path
     end
+  end
+
+  def set_search
+    @search = Post.ransack(params[:q]) 
+    @search_posts = @search.result.page(params[:page]).per(4).order(created_at: :desc)
   end
 end
