@@ -47,16 +47,11 @@ button.button_logout{
     margin-right:20px;
     display: inline-block;
     border-radius: 20px 20px 20px 20px;
+    
   }
   
   .card-content {
     padding: 20px;
-  }
-
-  .post_time{
-    color: #8899a6;
-    float: left;
-    margin-bottom: 25px;
   }
 
  .card-content p{
@@ -100,11 +95,23 @@ button.button_logout{
       font-size:55px;
   }
 
-    nav.pagination {
-    display: none;
+  .post_time{
+    color: #8899a6;
+    float: left;
+    margin-bottom: 25px;
+  }
+  
+  .post_menus{
+    padding-top: 20px;
+    padding-right: 10px;
+    float: right;
   }
 
 
+
+    nav.pagination {
+    display: none;
+  }
 
   .left_img img{
     width: 280px;
