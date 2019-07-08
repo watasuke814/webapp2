@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts , only: [:index,:create] do
     resource :favorites, only: [:create, :destroy]
   end
-  resources :users, only: [:create,:edit,:update] 
+  resources :users, only: [:create,:show,:edit,:update] 
   post 'login', to: 'users#login'
   post 'logout', to: 'users#logout'
   root 'home#top'
