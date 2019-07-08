@@ -13,7 +13,12 @@ class UsersController < ApplicationController
       end
   end 
 
-  def show
+  def posts
+    @user = User.find(params[:id])
+    @current_user_posts = @user.posts.page(params[:page]).per(4).order(created_at: :desc)
+  end
+
+  def favorites
     @user = User.find(params[:id])
     @favorite_posts = @user.favorite_posts.page(params[:page]).per(4).order(created_at: :desc)
   end

@@ -18,7 +18,8 @@
                     <div class="col-md-6 prof_right">
                         <h2><%= @current_user.name %></h2> 
                         <h6><%= @current_user.email %></h6>
-                        <%= link_to "favorites: #{@current_user.favorites.count}", "/users/#{@current_user.id}", class: 'btn btn-primary' %>
+                        <%= link_to "favorites: #{@current_user.favorites.count}", "/users/#{@current_user.id}/favorites", class: 'btn btn-primary' %>
+                        <%= link_to "posts: #{@current_user.posts.count}", "/users/#{@current_user.id}/posts", class: 'btn btn-primary' %>
                     </div>
                </div>
                <div class="row">
