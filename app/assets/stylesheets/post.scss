@@ -107,11 +107,12 @@ button.button_logout{
     float: right;
   }
 
-
-
     nav.pagination {
     display: none;
   }
+
+  
+  /* user_profile ================================ */
 
   .left_img img{
     width: 280px;
@@ -119,15 +120,20 @@ button.button_logout{
     border-radius: 50%;
   }
 
-  .prof_left{
-    margin-top:60px;
-  }
-
   .prof_right{
     margin-top:90px;
   }
 
-  .edit{
-    margin-bottom:20px;
+  .fav_num{
+    margin-bottom: 5px;
   }
 
+  /* edit.html ================================ */
+
+  .prof_left{
+    margin-top:60px;
+  }
+
+  // .edit{
+  //   margin-bottom:20px;
+  // }
