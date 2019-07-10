@@ -23,8 +23,8 @@
                     </div>
                </div>
                <div class="row">
-                  <div class="col-md-12">
-                     
+                  <div class="col-md-12 user-bottom">
+                     <%= simple_format(@current_user.profile) %>
                      <%= link_to "edit", "/users/#{@current_user.id}/edit", class: 'btn btn-primary' %>
                   </div>
                </div>
