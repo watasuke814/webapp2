@@ -27,17 +27,18 @@
                       comment
                   </div>
 
-                
-                <% if post.favorited_by?(@current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
-                    <%=link_to post_favorites_path(post.id), method: :delete do %>
-                        <i class="fas fa-thumbs-up like-btn-unlike"></i>
+                <div class="count">
+                    <% if post.favorited_by?(@current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+                        <%=link_to post_favorites_path(post.id), method: :delete do %>
+                            <i class="fas fa-thumbs-up like-btn-unlike"></i>
+                        <% end %>
+                    <% else %>
+                        <%=link_to post_favorites_path(post.id), method: :post do %>
+                            <i class="fas fa-thumbs-up like-btn"></i>
+                        <% end %>
                     <% end %>
-                <% else %>
-                    <%=link_to post_favorites_path(post.id), method: :post do %>
-                        <i class="fas fa-thumbs-up like-btn"></i>
-                    <% end %>
-                <% end %>
-                <%= post.favorites.count %>
+                    <%= post.favorites.count %>
+                </div>
 
               </div>
           </section>
