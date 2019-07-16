@@ -5,27 +5,23 @@
                   <div class="user">
                     <div class="user_item card-user_image">
                         <%= image_tag post.user.image_name.to_s %>
-                    </div>
-                    <p class="user_item">
-                        <%= post.user.name %> 
-                    </p>
+                        <%= post.user.name %>
+                    </div>                    
                   </div>
                   </br> 
+
                   <p class="post_title">
-                      <%= post.title %>
+                    <%= post.title %>
                   </p>
+
                   <div class="post_image">
                       <%= image_tag post.image_name.to_s %></br>
                   </div>
+                  
                   <p class="post_content">
-                      <%= simple_format(post.content) %>
+                    <%= simple_format(post.content) %>
                   </p>
-                  <div class="post_time">
-                      <%= post.created_at %>
-                  </div>
-                  <div class="post_menus">
-                      comment
-                  </div>
+                  
 
                 <div class="count">
                     <% if post.favorited_by?(@current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
@@ -38,9 +34,15 @@
                         <% end %>
                     <% end %>
                     <%= post.favorites.count %>
+                </div><br>
+
+                <div class="post_time"> 
+                    <%= post.created_at %>
                 </div>
+
 
               </div>
           </section>
     <% end %>
+    <%= paginate @search_posts %>
 </div>

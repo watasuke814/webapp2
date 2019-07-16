@@ -76,6 +76,6 @@ $(function(){
 
 $(function(){
   $(".bg-slider").bgswitcher({
-    images: ['matsuyama2.jpg','shimonada1.jpg','sakura.jpg','katsurahama.jpg'],
+    images: ['readman.jpg','neko1.jpg','readgirl.jpg','hondana.jpg'],
     });
 });

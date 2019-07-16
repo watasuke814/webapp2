@@ -92,13 +92,15 @@ button.button_logout{
   }
 
   .post_content{
-      font-size:55px;
+    font-size:55px;
   }
 
   .post_time{
+    font-size: 10px;
     color: #8899a6;
     float: left;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .post_menus{
@@ -109,7 +111,6 @@ button.button_logout{
 
   .count{
     float:left;
-    margin-top: 50px;
   }
 
   .like-btn {
