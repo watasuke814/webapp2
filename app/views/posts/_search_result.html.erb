@@ -24,9 +24,7 @@
                   </p>
                   
 
-                <div class="count">
-                
-
+                <div class="fav-count">
                     <% if post.favorited_by?(@current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
                         <%=link_to post_favorites_path(post.id), method: :delete do %>
                             <i class="fas fa-thumbs-up like-btn-unlike"></i>
@@ -37,9 +35,10 @@
                         <% end %>
                     <% end %>
                     <%= post.favorites.count %>
+                </div>
 
-                    <i class="far fa-comment-dots"></i>
-
+                <div class="com-count" data-toggle="modal" data-target="#UserModal">
+                        <i class="far fa-comment-dots"></i>
                 </div>
                 
                 

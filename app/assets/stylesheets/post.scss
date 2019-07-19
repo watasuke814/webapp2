@@ -109,7 +109,7 @@ button.button_logout{
     float: right;
   }
 
-  .count{
+  .fav-count{
     float:left;
   }
 
@@ -121,6 +121,10 @@ button.button_logout{
     color: #ff2581;
   }
 
+  .com-count{
+    float: left;
+    margin-left:4px;
+  }
 
     nav.pagination {
     display: none;
