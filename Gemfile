@@ -70,7 +70,7 @@ gem 'pg', group: :production
 gem 'kaminari', '~> 1.1.1'
 gem 'regexp_parser'
 gem 'toastr-rails'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'rmagick'
 gem 'ransack'
 gem 'jquery-bgswitcher-rails'
